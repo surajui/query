@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        
+        <div class="col-6">
+            <input type="text" [(ngModel)]="data">
+            <p-table [columns]="cols" [value]="result | filter:data">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Id</th>
+                        <th>Fullname</th>
+                        <th>Contact</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-data>
+                    <tr (click)="info(data)">
+                        <td>{{data.id}}</td>
+                        <td>{{data.fullname}}</td>
+                        <td>{{data.contact}}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="row">
+        <table class="table table-bordred">
+            <tr>
+                <th>Id</th>
+                <th>Fullname</th>
+                <th>Contact</th>
+            </tr>
+            <tr *ngFor="let s of result">
+                <td><a [routerLink]="['/main']" [queryParams]="{id: s.id,fullname:s.fullname}">{{s.id}}</a></td>
+                <td>{{s.fullname}}</td>
+                <td>{{s.contact}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

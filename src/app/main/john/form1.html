@@ -1,0 +1,40 @@
+<html>
+<head></head>
+<style>
+    p{
+        color: red;
+    }
+</style>
+<body>
+    <form action="home.html" onsubmit=" return validate();">
+        
+        Email <input type="text" placeholder="email" id="ema1"><br>
+        <p id="i"></p>
+        Name<input type="text" placeholder="name" id="ema2"><br>
+        <p id="i"></p>
+        Age <input type="text" placeholder="age" id="ema3"><br>
+        <p id="i"></p>
+        <button >Submit</button>
+	</form>
+</body>
+<script>
+    function validate(){
+	
+    var a=document.getElementById("ema1").value;
+    var b=document.getElementById("ema2").value;
+    var c=document.getElementById("ema3").value;
+    if((a=="") || (b=="") || (c=="")) 
+    {
+        document.getElementById("i").innerHTML="Invalid";
+        return false;
+
+    }
+    else
+    {
+        document.getElementById("i").innerHTML="";
+        return true;
+    }
+
+    }
+</script>
+</html>
